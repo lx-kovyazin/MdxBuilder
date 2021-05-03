@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1 - Copy.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Class1 - Copy.cs" />
+  </ItemGroup>
+
+</Project>
