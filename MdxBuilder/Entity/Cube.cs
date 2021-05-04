@@ -3,7 +3,8 @@
     public sealed class Cube
         : UniqueEntity
     {
-        public override string ToString()
-            => UniqueName;
+        public Cube(string cubeName)
+            : base(cubeName)
+        { }
     }
 }

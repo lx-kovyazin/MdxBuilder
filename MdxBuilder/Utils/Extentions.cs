@@ -34,10 +34,10 @@ namespace MdxBuilder.Utils
         public static Operand AsOp(this UniqueEntity uniqueEntity)
             => new Operand(uniqueEntity);
 
-        public static IEnumerable<Operand> AsOp(this IEnumerable<UniqueEntity> uniqueEntities)
-            => uniqueEntities.Select(ue => ue.AsOp());
+        public static Operand[] AsOp(this IEnumerable<UniqueEntity> uniqueEntities)
+            => uniqueEntities.Select(ue => ue.AsOp()).ToArray();
 
         public static Operand[] AsOp(this UniqueEntity[] uniqueEntities)
-            => uniqueEntities.AsOp().ToArray();
+            => uniqueEntities.AsOp();
     }
 }
