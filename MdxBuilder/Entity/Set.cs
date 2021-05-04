@@ -3,7 +3,7 @@ using MdxBuilder.Entity.Abstract;
 
 namespace MdxBuilder.Entity
 {
-    public class Set
+    public sealed class Set
         : BuildableEntityOfBuildableEntitySet<
             Set,
             SetBuilder,

@@ -3,7 +3,7 @@ using MdxBuilder.Entity.Abstract;
 
 namespace MdxBuilder.Entity
 {
-    public class SelectExpression
+    public sealed class SelectExpression
         : BuildableEntityOfBuildableEntitySet<
             SelectExpression,
             SelectExpressionBuilder,
