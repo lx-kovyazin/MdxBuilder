@@ -22,7 +22,6 @@
     <Folder Include="Entity\Function\Tuple\" />
     <Folder Include="Entity\Function\Subcube\" />
     <Folder Include="Entity\Function\String\" />
-    <Folder Include="Entity\Function\Set\" />
     <Folder Include="Entity\Function\Numeric\" />
   </ItemGroup>
 
