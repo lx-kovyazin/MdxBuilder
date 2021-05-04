@@ -12,4 +12,17 @@
     <Resource Include="Class1 - Copy.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Entity\Function\Array\" />
+    <Folder Include="Entity\Function\Hierarchy\" />
+    <Folder Include="Entity\Function\Level\" />
+    <Folder Include="Entity\Function\Logical\" />
+    <Folder Include="Entity\Function\Member\" />
+    <Folder Include="Entity\Function\Other\" />
+    <Folder Include="Entity\Function\Tuple\" />
+    <Folder Include="Entity\Function\Subcube\" />
+    <Folder Include="Entity\Function\String\" />
+    <Folder Include="Entity\Function\Numeric\" />
+  </ItemGroup>
+
 </Project>
