@@ -51,7 +51,9 @@ namespace MdxBuilder.Builder
         public override FromExpression Build()
         {
             bodyBuilder.Append("FROM ");
+            bodyBuilder.Append("(");
             bodyBuilder.Append(entity.NestedEntity);
+            bodyBuilder.Append(")");
             return base.Build();
         }
     }
