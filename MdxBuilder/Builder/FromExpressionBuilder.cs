@@ -33,7 +33,7 @@ namespace MdxBuilder.Builder
         {
             bodyBuilder.Append(
                 entity.Cube is null
-                    ? entity.NestedEntity.ToString()
+                    ? $"({entity.NestedEntity})"
                     : entity.Cube.ToString()
             );
             return base.Build();
@@ -51,9 +51,7 @@ namespace MdxBuilder.Builder
         public override FromExpression Build()
         {
             bodyBuilder.Append("FROM ");
-            bodyBuilder.Append("(");
             bodyBuilder.Append(entity.NestedEntity);
-            bodyBuilder.Append(")");
             return base.Build();
         }
     }

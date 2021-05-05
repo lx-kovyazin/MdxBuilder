@@ -119,10 +119,10 @@ namespace MdxBuilderTest
         [Fact]
         public void SubCubeBuilderSubCubeTest()
         {
-            var expectedBody = $"SELECT"
+            var expectedBody = $"(SELECT"
                              + $" {{({ui0}, {ui1}), ({ui2}, {ui3})}} ON COLUMNS,"
                              + $" {{({ui4}, {ui5}), ({ui6}, {ui7})}} ON ROWS "
-                             + $"FROM ({cube})"
+                             + $"FROM {cube})"
                              ;
             var actualBody = new SubCubeBuilder()
                 .Set(scb => scb
@@ -168,7 +168,7 @@ namespace MdxBuilderTest
             var expectedBody = $"FROM (SELECT"
                              + $" {{({ui0}, {ui1}), ({ui2}, {ui3})}} ON COLUMNS,"
                              + $" {{({ui4}, {ui5}), ({ui6}, {ui7})}} ON ROWS "
-                             + $"FROM ({cube}))"
+                             + $"FROM {cube})"
                              ;
             var subCube = new SubCubeBuilder()
                 .Set(scb => scb
@@ -216,7 +216,7 @@ namespace MdxBuilderTest
         [Fact]
         public void FromExpressionBuilderSubCubeTest()
         {
-            var expectedBody = $"FROM ({cube})";
+            var expectedBody = $"FROM {cube}";
             var actualBody = new FromExpressionBuilder()
                 .Set(cb => cb.Set(cube))
                 .Build()
@@ -233,7 +233,7 @@ namespace MdxBuilderTest
                               + $" {{({ui0} * {ui1}, {ui1}, {ui2}),"
                               + $" ({ui3}, {ui4}, {ui5})}} ON COLUMNS,"
                               + $" {{({ui6}, {ui7}, {ui8})}} ON ROWS"
-                              + $" FROM ({cube})";
+                              + $" FROM {cube}";
             var actualQuery = Mdx.Create()
                 .Select(select => select
                     .Add(cols => cols
